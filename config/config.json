@@ -1,0 +1,38 @@
+{
+  "appid": "",
+  "group": "",
+  "webmap": "7eca81856e22478da183da6a33c24dfe",
+  "webscene": "",
+  "portalUrl": "https://www.arcgis.com",
+  "oauthappid": "",
+  "proxyUrl": "",
+  "title": null,
+  "subtitle": null,
+  "logo": "http://www.arcgis.com/apps/MapJournal/resources/tpl/viewer/icons/esri-logo.png",
+  "searchPlaceholder": "Enter search value",
+  "searchLayer": {
+    "id": null,
+    "fields": []
+  },
+  "headerBackgroundColor": "#f8f8f8",
+  "headerTextColor": "#5c5c5c",
+  "panelBackgroundColor": "#f8f8f8",
+  "panelTextColor": "#5c5c5c",
+  "units": "",
+  "helperServices": {
+    "geometry": {
+      "url": null
+    },
+    "printTask": {
+      "url": null
+    },
+    "elevationSync": {
+      "url": null
+    },
+    "geocode": [
+      {
+        "url": null
+      }
+    ]
+  }
+}

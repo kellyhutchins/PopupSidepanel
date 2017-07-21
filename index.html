@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Define the versions of IE that will be used to render the page. See Microsoft documentation for details. Optional. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- End Responsive -->
+  <!-- Use protocol relative urls that way if the browser is viewing the page via HTTPS the js/css file will be requested using the HTTPS protocol -->
+  <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.0.0-rc.1/css/calcite-web.min.css">
+  <link rel="stylesheet" href="//js.arcgis.com/4.4/esri/css/main.css">
+  <!-- Load any application specific styles -->
+  <link rel="stylesheet" href="css/boilerplate.css">
+</head>
+
+<body class="boilerplate--loading custom-theme">
+  <div class="boilerplate-loading-indicator">
+    <div class="boilerplate-loading-message" id="loading_message"></div>
+  </div>
+  <div id="viewDiv" class="boilerplate-view">
+    <div class="panel modifier-class panel-no-border panel-no-padding" id="sidebar">
+      <div class="panel-header">
+        <div>
+          <span class="title" id="title"></span>
+          <span class="logo" id="logo"></span>
+        </div>
+        <div id=class="subtitle"></div>
+      </div>
+      <div class="panel-contents">
+        <div id="searchContainer" role="search" class="searching"></div>
+        <div id="detailsContainer" class="details"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/dojoConfig.js"></script>
+  <script type="text/javascript" src="//js.arcgis.com/4.4/"></script>
+  <script type="text/javascript">
+    require([
+      "boilerplate",
+      "dojo/text!config/config.json",
+      "dojo/text!boilerplate/settings.json",
+      "application"
+    ], function (
+      Boilerplate,
+      configSettings,
+      boilerplateSettings,
+      app
+    ) {
+
+      // This is an example template app. It uses the boilerplateResponse returned to create a webmap, webscene or show group info.
+      // You can edit the logic directly in the app.js file or you can just follow the pattern to create your own myApp.js class.
+      // NOTE: We recommend creating your own myApp.js class as it will be easier to merge future Boilerplate updates.
+      var exampleApp = new app();
+
+      // The Boilerplate uses the config and boilterplate JSON settings, and the URL parameters to fetch and create items from
+      // ArcGIS.com or your portal. The boilerplateResponse returned contains item, webmap, webscene and/or group info.
+      // NOTE: You shouldn't need to edit the Boilerplate code, but you will need to edit the JSON settings files.
+      new Boilerplate(JSON.parse(configSettings), JSON.parse(boilerplateSettings)).then(function (
+        boilerplateResponse) {
+        exampleApp.init(boilerplateResponse);
+      });
+
+    });
+  </script>
+</body>
+
+</html>

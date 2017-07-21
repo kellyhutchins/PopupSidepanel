@@ -1,0 +1,177 @@
+html,
+body,
+#customApp {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body:lang(ja) {
+  font-family: meiryo, Arial, Helvetica, sans-serif;
+}
+
+.boilerplate-view {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.boilerplate-loading-indicator {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.boilerplate--loading .boilerplate-loading-indicator {
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../images/loading.gif);
+}
+
+.boilerplate--error .boilerplate-loading-indicator {
+  display: block;
+}
+
+.boilerplate-loading-message {
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 0;
+  text-align: center;
+}
+/*Custom App CSS*/
+
+#viewDiv {
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 350px;
+}
+
+#sidebar.bottom-panel {
+    z-index: 99;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 100%;
+}
+#detailsContainer {
+    background-color: #f8f8f8;
+}
+#searchContainer {
+    width: 90%;
+    margin: 0.5em auto;
+}
+.filter-tools {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.panel-header{
+  height:75px;
+  border-bottom: solid 1px #ccc;
+}
+
+.logo, .logo img{
+    display: inline-block;
+    max-width:100px;
+    max-height:45px;
+    vertical-align: middle;
+}
+
+.title{
+    width:230px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom:0;
+    padding-left:5px;
+    line-height: 55px;
+    overflow:hidden;
+    font-size: 22px;
+}
+.subtitle{
+    width:100%;
+    line-height: 20px;
+    overflow:hidden;
+    padding-left:5px;
+    
+}
+.intro {
+    padding: 0.3em;
+    margin-bottom: 0;
+}
+.hide {
+    display: none;
+}
+.details {
+    margin: 0.5em;
+    text-align: center;
+}
+div.esri-menu.esri-search__suggestions-menu {
+    z-index: 30;
+}
+.custom-theme .esri-popup--is-docked {
+    margin: 0;
+}
+.custom-theme .esri-popup__main-container {
+    box-shadow: none !important;
+}
+.custom-theme .esri-popup__position-container {
+    margin-top: 1em;
+    width: 350px !important;
+    height: 100%;
+    position: initial !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.custom-theme .esri-popup__position-container {
+    width: 350px;
+}
+.custom-theme .esri-popup--shadow {
+    box-shadow: none;
+}
+.custom-theme .esri-popup-renderer {
+    background-color: #f8f8f8;
+}
+.custom-theme .esri-popup__main-container {
+    background-color: #f8f8f8;
+    max-height: 100% !important;
+}
+.custom-theme .esri-popup__content {
+    height: 100% !important;
+}
+.esri-popup__pointer {
+    display: none;
+}
+
